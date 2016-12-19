@@ -1,0 +1,12 @@
+Extraction.m - Data from abqus is converted to a matrix with the elements, its corresponding nodes, energy and euler angles
+
+EngGrad.m - Output of Extraction.m is used as input. Returns a matrix with the energy gradients and the misorientation angle 
+(radians) (Symmetry not accounted for)
+
+FinalDataForm.m - Output of EngGrad is used as input. Finds the average energy at every misorientation angle.
+
+PlotAll.m - Output of EngGrad and FinalDataForm is used as input for the scatter and normal plots
+
+Coorelation.R - Output of EngGrad and FinalDataForm is used as input for the correlation value, correlation plots and box plots
+
+timer3.m - To calculate the time taken and the number of grain boundaries (unique and repeated) for given number of grains

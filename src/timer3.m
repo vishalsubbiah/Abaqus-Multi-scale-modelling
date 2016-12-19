@@ -1,0 +1,40 @@
+load('Time10');
+t10=time;
+load('Time100');
+t100=time;
+load('Time15');
+t15=time;
+load('Time1000');
+t1000=time;
+load('Time20');
+t20=time;
+load('Time25');
+t25=time;
+load('Time27');
+t27=time;
+load('Time50');
+t50=time;
+t1=(17*3600)+(19*60);
+t=[t1000,t100,t50,t27,t25,t20,t15,t10,t1];
+n=27000;
+N=[n/1000,n/100,n/50,n/27,n/25,n/20,n/15,n/10,n];
+NoGrainsBefAvg=[26,501,1032,2006,2244,3045,4380,7020,78300];
+NoGrainsPosAvg=[12,157,311,627,694,896,1075,1268,7054];
+
+figure();
+hold on;
+set(gca,'FontSize',16);
+scatter(N,t,'r')
+xlabel('Total number of Grains');
+ylabel('Time taken');
+
+figure();
+hold on;
+set(gca,'FontSize',16);
+plot(N,NoGrainsBefAvg,'b');
+plot(N,NoGrainsPosAvg,'g');
+scatter(N,NoGrainsBefAvg,'b');
+scatter(N,NoGrainsPosAvg,'g');
+xlabel('Total number of Grains');
+legend('Before averaging','After Averaging');
+ylabel('Number of Grain boundaries');
